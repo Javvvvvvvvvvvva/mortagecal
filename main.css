@@ -1,0 +1,29 @@
+/* 
+    Filename: main.css
+    Author:   Yoonseo Choi
+    Date:     2022.12.09
+ */
+
+/* reset styles */
+table, th, td {
+    border: 1px solid black;
+    border-radius: 5px;
+    border-collapse: collapse;
+    padding: 0;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+#MP{
+    text-align: right;
+}
+a{
+    color: red;
+}
+#tbut{
+    position: relative;
+    left: 100px;
+}
+u{
+    font: bold;
+    font-size: large;
+}

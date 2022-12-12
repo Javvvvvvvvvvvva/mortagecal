@@ -1,0 +1,72 @@
+<!--
+    Filename: mortage.html
+    Author:   Yoonseo Choi
+    Date:     2022.12.09
+--> 
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Financial Calculator</title>
+
+    
+    <link href="main.css" rel="stylesheet" type="text/css">
+    <script src="main.js"></script>
+    </head>
+
+    <body>
+    <form name="fincalc">
+    <table>
+        <tr>
+            <td colspan="2">Enter the amount of mortgage, change the yearly interest rates into percentage (e.g., 8.5%=8.5) if you are quoted a<br>
+different rate, and select Length of loan in number of years. Click the "<u>calculate</u>"   button to view monthly payment.<br>
+Click the <u>reset</u>  button to clear the form. For personal and business loans there will be a $1000.00 to $500.00<br>
+origination fees that will be included in monthly payments. There is no origination fees for education loans.
+            </td>
+        </tr>
+        
+    <tr>
+        <td>Type of Loan:</td>
+        <td><input type="radio" id="personal" name="type" checked>Personal ($1000.00 origination fees)<br>
+        <input type="radio" id="business" name="type">Business ($500.00 origination fees)<br>
+        <input type="radio" id="education" name="type">Education</td>
+    </tr>
+    
+    <tr>
+        <td>Loan Amount:</td>
+        <td><input type="text" name="amount"></td></tr>
+    <tr>
+        <td>Interest Rate IN Decimal(e.g., 8.5%=8.5):</td>
+        <td><input type="text" name="interest" value="7.5"></td>
+    </tr>
+
+    <tr>
+        <td>Length of loan in years</td>
+        <td>
+    <select id="time">
+        <option value="5" selected>5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+        <option value="25">25</option>
+        <option value="30">30</option>
+    </select>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Full time student:</td>
+        <td id="dis"><input type="checkbox" name="discount"> (get 1% rate discount)</td>
+    </tr>
+
+    <tr>
+        <td colspan="2"><input type="button" value="Calculate Monthly payments" onclick="showVal()"><input id="Tbut" type="button" value="Reload" onclick="reload()">
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2" id="Mp"><a>Monthly payments</a> $<input type="text" name="payment"></td></tr>
+    <tr>
+        <td colspan="2" id="Mp"><a>Total Payments</a> $<input type="text" name="tpayment"></td></tr>
+    </table>
+    </body>
+</html>
